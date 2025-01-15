@@ -4,6 +4,8 @@ import "./App.css";
 import Navbar from "./Components/navbar";
 import HeroRobot from "./Components/hero-robot";
 import AboutUs from "./Components/about-us";
+import OurAim from "./Components/our-aim";
+import Gallery from "./Components/gallery";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -16,6 +18,8 @@ function App() {
       {/* <HeroSection isDarkMode={isDarkMode} /> */}
       <HeroRobot isDarkMode={isDarkMode} />
       <AboutUs isDarkMode={isDarkMode} />
+      <OurAim isDarkMode={isDarkMode} />
+      <Gallery isDarkMode={isDarkMode} />
     </div>
   );
 }

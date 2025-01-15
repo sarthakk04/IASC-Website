@@ -1,5 +1,12 @@
 import React from "react";
-import { FaInstagram, FaGithub, FaLinkedin, FaWhatsapp, FaMedium } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaGithub,
+  FaLinkedin,
+  FaWhatsapp,
+  FaMedium,
+} from "react-icons/fa";
+import intelimg from "../assets/intel_logo.png";
 
 const AboutUs = ({ isDarkMode }) => {
   return (
@@ -11,9 +18,13 @@ const AboutUs = ({ isDarkMode }) => {
       {/* Left Side (Image or Graphic) */}
       <div className="md:w-1/2 w-full h-full flex items-center justify-center p-6">
         <img
-          src={isDarkMode ? "/about-dark.png" : "/about-light.png"}
+          src={intelimg}
           alt="About Us"
-          className="w-3/4 max-w-sm rounded-lg shadow-lg transition-all duration-300"
+          className={`w-3/4 max-w-sm rounded-lg shadow-lg transition-all duration-300 ${
+            isDarkMode
+              ? "shadow-[0_0_20px_5px_#0071c4] filter-brightness-125"
+              : "shadow-[0_0_20px_5px_#3ea6ff] filter-brightness-110"
+          }`}
         />
       </div>
 
@@ -21,14 +32,16 @@ const AboutUs = ({ isDarkMode }) => {
       <div className="md:w-1/2 w-full flex flex-col items-start justify-center p-6 space-y-6">
         {/* Heading */}
         <h1 className="text-3xl font-bold">
-          {isDarkMode ? "About Us 🌌" : "About Us 🌟"}
+          {isDarkMode
+            ? "Intel® Student Ambassador Programs 🌌"
+            : "Intel® Student Ambassador Programs 🌟"}
         </h1>
 
         {/* Description */}
         <p className="text-lg leading-7">
           {isDarkMode
-            ? "We are a team of innovators exploring creativity and technology under the stars."
-            : "We are a team of visionaries shaping the future with innovation and brilliance."}
+            ? "Undergraduate and graduate students who are passionate about technology and working with developer communities can participate in these programs to promote learning, sharing, and collaboration."
+            : "Undergraduate and graduate students who are passionate about technology and working with developer communities can participate in these programs to promote learning, sharing, and collaboration."}
         </p>
 
         {/* Social Media Icons */}
