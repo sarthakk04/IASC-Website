@@ -8,6 +8,7 @@ const HeroSection = ({ isDarkMode }) => {
         isDarkMode ? "bg-black text-white" : "bg-white text-black"
       }`}
     >
+      
       {/* Left Section: 3D Element */}
       <div
         className="relative w-full md:w-1/2 flex justify-center mb-6 md:mb-0"

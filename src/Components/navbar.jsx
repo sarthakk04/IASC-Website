@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import lightlogo from "../assets/light-logo.png";
+import darklogo from "../assets/dark-logo.png"; // Assuming the dark logo is imported here
 
 const Navbar = ({ isDarkMode, toggleTheme }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,18 +12,19 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
       className={`flex items-center justify-between p-4 shadow-md transition-all duration-300 ${
         isDarkMode ? "bg-black text-white" : "bg-white text-black"
       }`}
+      style={{
+        zIndex: 10, // Ensures the Navbar is above the Spline
+      }}
     >
       {/* Logo */}
       <div className="text-2xl font-bold flex items-center">
-        <span
-          role="img"
-          aria-label="logo"
-          className="mr-2"
-          style={{ color: isDarkMode ? "#0071c4" : "black" }}
-        >
-          🚀
+        <span role="img" aria-label="logo" className="mr-2">
+          <img
+            src={isDarkMode ? darklogo : lightlogo} // Show the correct logo based on the theme
+            alt="Logo"
+            className="h-12 w-auto transition-all duration-300" // Adjust height and width as needed
+          />
         </span>
-        <span>MyLogo</span>
       </div>
 
       {/* Links (Desktop View) */}
@@ -76,6 +79,9 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
           className={`absolute top-16 left-0 w-full shadow-md md:hidden transition-all duration-300 ${
             isDarkMode ? "bg-black text-white" : "bg-white text-black"
           }`}
+          style={{
+            zIndex: 15, // Higher than Spline
+          }}
         >
           <a
             href="#home"
