@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Add these custom utilities */
+@layer utilities {
+  .text-glow-blue {
+    text-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+  }
+
+  .text-glow-dark {
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  }
+}
