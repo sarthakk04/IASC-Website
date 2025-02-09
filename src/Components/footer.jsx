@@ -16,11 +16,11 @@ const Footer = ({ isDarkMode }) => {
               isDarkMode ? "text-blue-400" : "text-blue-600"
             }`}
           >
-            YourLogo
+            Intel AI Students Club
           </h1>
-          <p className="text-sm mt-2">
+          {/* <p className="text-sm mt-2">
             Creating experiences, one pixel at a time.
-          </p>
+          </p> */}
         </div>
 
         {/* Center Section: Social Links */}
@@ -81,13 +81,13 @@ const Footer = ({ isDarkMode }) => {
                 isDarkMode ? "text-blue-400" : "text-blue-600"
               }`}
             >
-              support@yourlogo.com
+              intelstudentsclubdypcoe@gmail.com
             </a>
           </p>
           <p className="mt-2">
-            © {new Date().getFullYear()} YourLogo. All rights reserved.
+            © {new Date().getFullYear()} All rights reserved.
           </p>
-          <p className="mt-2">Made with ❤️ by Tech Enthusiasts.</p>
+          <p className="mt-2">Made with ❤️ by IASC.</p>
         </div>
       </div>
     </footer>

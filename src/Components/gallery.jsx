@@ -1,28 +1,29 @@
 import React from "react";
 import { motion } from "framer-motion";
+import hacktoberfest from "../assets/hactoberfest.jpg";
+import bit from "../assets/bit.jpg";
 import eventImg from "../assets/event1.jpg";
+import magnitude from "../assets/magnitude.jpg";
 
 const Gallery = ({ isDarkMode }) => {
   const galleryItems = [
     {
       id: 1,
-      image: eventImg,
-      title: "Hackathon 2024",
-      description:
-        "An exhilarating 48-hour coding sprint with talented developers.",
+      image: hacktoberfest,
+      title: "Hacktoberfest 2024",
+      description: "Unlock the power of open source - your code, your impact",
     },
     {
       id: 2,
-      image: eventImg,
-      title: "AI Workshop",
-      description: "A deep dive into the world of artificial intelligence.",
+      image: bit,
+      title: "Breaking into Tech",
+      description: "Hear the inspiring journey of an Full Stack AI Developer",
     },
     {
       id: 3,
-      image: eventImg,
-      title: "Networking Meetup",
-      description:
-        "Connecting tech enthusiasts for collaboration and innovation.",
+      image: magnitude,
+      title: "MAGNITUDE",
+      description: "A Hackathon from Innovation & Impact",
     },
     {
       id: 4,
@@ -77,7 +78,7 @@ const Gallery = ({ isDarkMode }) => {
         </motion.h2>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-12"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -96,12 +97,12 @@ const Gallery = ({ isDarkMode }) => {
               }}
             >
               {/* Image */}
-              <div className="overflow-hidden">
+              <div className="overflow-hidden w-full h-64 md:h-80 lg:h-96 flex items-center justify-center">
                 <img
                   src={item.image}
                   alt={item.title}
                   loading="lazy"
-                  className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-700"
+                  className="w-full h-full object-cover object-center transform group-hover:scale-110 transition-transform duration-700"
                 />
               </div>
 
